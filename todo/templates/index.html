@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container-sm text-center">
+        <h1 class="display-3">Bienvenido a nuestra app de Tareas</h1>
+        <p class="lead">En esta app puedes crear, listar y gestionar tus tareas diarias.</p>
+        <hr class="my-4">
+        <p>Si no tienes una cuenta, puedes registrarte:</p>
+
+        <div class="btn-group">
+            <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg mx-2">Registrarse</a>
+            <a href="{{ url_for('auth.login') }}" class="btn btn-secondary btn-lg mx-2">Iniciar sesión</a>
+        </div>
+    </div>
+{% endblock %}
