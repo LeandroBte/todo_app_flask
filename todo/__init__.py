@@ -10,7 +10,7 @@ def create_app():
     app = Flask(__name__)
     
     # Configuraciones del proyecto
-    app.config['SECRET_KEY'] = 'mysecretkey'
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'valor_por_defecto')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.debug = True
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///todolist.db"
